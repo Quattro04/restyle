@@ -1,0 +1,1 @@
+export const STRIPE_API_VERSION = '2022-11-15'
