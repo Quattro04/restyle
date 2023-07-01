@@ -20,7 +20,10 @@ export async function GET() {
         const price = prices.data.find(p => p.id === product.default_price)
         if (price && price.unit_amount) {
             const cents = price.unit_amount % 100
-            const priceInDecimal = (price.unit_amount / 100) + (cents / 100)
+            let priceInDecimal = price.unit_amount / 100
+            if (priceInDecimal % 1 === 0) {
+                priceInDecimal += (cents / 100)
+            }
             return {
                 id: product.id,
                 name: product.name,
