@@ -12,10 +12,10 @@ export default function Products() {
 
     return (
         <Layout>
-            <main className="flex-1 flex flex-col items-center justify-between p-24 bg-slate-800 overflow-auto">
-                <div className="flex">
+            <main className="flex-1 flex flex-col items-center justify-between p-24 bg-zinc-900 overflow-auto">
+                <div className="flex flex-wrap items-center justify-center">
                     {products.map((product) => (
-                        <div key={product.id} className="w-64 h-96 flex flex-col m-3 rounded-xl bg-slate-900">
+                        <div key={product.id} className="w-64 h-96 flex flex-col m-3 rounded-xl bg-zinc-800">
                             <div className="flex-[2_2_0%] overflow-hidden relative">
                                 <Image
                                     src={product.images[0]}
